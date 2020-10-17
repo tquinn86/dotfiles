@@ -4,7 +4,7 @@ git config --global push.default simple
 
 # use bash
 ln -s ~/.dotfiles/.bash_profile ~/
-ln -s ~/.dotfiles/git/gitconfig.aliases.symlink ~/github.aliases
-git config --global include.path ~/.gitconfig.aliases
+ln -s ~/.dotfiles/git/gitconfig.aliases.symlink ~/gitconfig.aliases
+git config --global include.path ~/gitconfig.aliases
 bash
 
