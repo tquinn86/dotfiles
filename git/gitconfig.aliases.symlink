@@ -15,7 +15,7 @@
     # Stages every file then creates a commit with specified message
     cm = !git add -A && git commit -m
     co = checkout
-    cob = checkout -b
+    cob = "!f() { name=$(git-config user.email | cut -d@ -f1); git checkout -b $name/$1 }; f"
     # Show list of files in a conflict state.
     conflicts = !git diff --name-only --diff-filter=U
     cp = cherry-pick
