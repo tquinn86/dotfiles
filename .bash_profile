@@ -20,5 +20,5 @@ elif [ -d ~/ghpi-image ]; then
   
   alias src="cd ~/ghpi-image"
   
-  src
+  src;
 fi
