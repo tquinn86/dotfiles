@@ -1,3 +1,4 @@
+#! /usr/bin/env bash
 alias l="ls -lah"
 alias cls=clear
 
@@ -14,11 +15,9 @@ if [ -d ~/enterprise2 ]; then
   export PATH=~/enterprise2:$PATH
   export FETCH_DOCKER_IMAGES=1
   export OVERLAY_VM_FILES=yes
-
-  src;
 elif [ -d ~/ghpi-image ]; then
   
   alias src="cd ~/ghpi-image"
-  
-  src;
 fi
+
+src;

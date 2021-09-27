@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+set -x
+# Kubectl Clear, clear out the cluster
+# Ryan's "Quick Teardown"
+GROUP_NAME="${1:-tquinn0}"
+
+kubectl delete -R -f rendered
+kubectl delete deployment --all
+kubectl delete statefulset --all
+kubectl delete pvc --all
+kubectl delete pv --all
+az mysql db delete -g "$GROUP_NAME" -s "${GROUP_NAME}" -n github_enterprise -y
+
+#./script/setup -g "$GROUP_NAME" -v
